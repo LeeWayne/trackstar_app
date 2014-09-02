@@ -13,8 +13,10 @@ Project1::Application.routes.draw do
 
   resources :users
   resources :sessions
-  resources :tracks
-  resources :comments
+  resources :tracks do
+   resources :comments
+ end
+
 
   
 end

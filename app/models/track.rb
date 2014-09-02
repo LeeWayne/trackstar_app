@@ -3,5 +3,6 @@ class Track < ActiveRecord::Base
   mount_uploader :track_song, TrackSongUploader
 
   belongs_to :user
+  acts_as_commentable
 
 end

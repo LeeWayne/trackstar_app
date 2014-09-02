@@ -22,11 +22,19 @@
 <b>Song:</b>
 <%= audio_tag(@track.track_song,autoplay: false, controls: true) %>
 </p>
-<!-- <audio controls>
-  <source src="audio.mp4" type="audio/tag">
-  <source src="audio.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio> -->
+<%= render @comments %>
+
+<h2>Say Whaaat??!!:</h2>
+  
+<%= form_for ([@track, @comment]) do |f| %>
+  <div class='field'>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Holla!" %>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_track_path(@track) %> |
 <%= link_to 'Back', tracks_path %>
