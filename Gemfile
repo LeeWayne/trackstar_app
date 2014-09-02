@@ -13,6 +13,7 @@ group :development, :test do
           gem 'binding_of_caller'
           gem 'better_errors'
           gem 'meta_request'
+          gem 'acts_as_commentable_with_threading'
   end
 
 gem 'cancancan', '~> 1.9'
