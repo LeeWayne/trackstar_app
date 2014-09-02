@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project1</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <h1>Trackstar</h1>
+  </header>
+
+
+  <nav>
+    <%= link_to 'Users', users_path %>
+    <%= link_to 'New User', new_user_path %>
+    <%= link_to 'Tracks', tracks_path %>
+    <%= link_to 'New Tracks', new_track_path %>
+  </nav>
+
+    <% flash.each do |name, msg| %>
+    <div class="flash-message flash-message-<%= name %>">
+      <%= msg %>
+    </div>
+  <% end %>
+
+  <% if current_user %>
+    <p>Greetings: <%= current_user.email %></p>
+    <p><%= link_to 'Log Out', logout_path %></p>
+  <% else %> 
+    <p><%= link_to 'Login', new_session_path %></p>
+  <% end %>
+
+<%= yield %>
+
+</body>
+</html>
