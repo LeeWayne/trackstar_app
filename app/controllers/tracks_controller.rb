@@ -9,7 +9,7 @@ class TracksController < ApplicationController
   end
 
   def create
-    Track.create(params[:track])
+    current_user.tracks.create(params[:track])
     redirect_to tracks_path
   end
 
