@@ -8,7 +8,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    # ? MAYBE - hint hint ?
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to track_url
   end
 
 end

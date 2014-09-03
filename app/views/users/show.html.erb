@@ -22,7 +22,7 @@
 <p><% @user.tracks.each do |track| %></p>
     <%= track.name %><br>
     <%= link_to 'Tracks', tracks_path %>
-  <% end %>
+  <% end %><br>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
