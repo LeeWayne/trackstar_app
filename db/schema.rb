@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140903091736) do
+ActiveRecord::Schema.define(:version => 20140903132303) do
 
   create_table "comments", :force => true do |t|
     t.integer  "commentable_id",   :default => 0
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20140903091736) do
     t.integer  "rgt"
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
+    t.integer  "report_id"
   end
 
   add_index "comments", ["commentable_id", "commentable_type"], :name => "index_comments_on_commentable_id_and_commentable_type"
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20140903091736) do
     t.text     "about"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "role"
   end
 
 end

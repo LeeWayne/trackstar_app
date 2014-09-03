@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
 
   has_many :tracks
   has_many :reports
+  has_many :reported_comments, through: :reports, source: :comment
 
   def role?(role_to_compare)
     self.role.to_s == role_to_compare.to_s

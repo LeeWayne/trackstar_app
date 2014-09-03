@@ -11,6 +11,10 @@ class ReportsController < ApplicationController
     redirect_to @track
   end
 
+  def show
+    
+  end
+
 end
 
 ## GOAL
@@ -30,6 +34,7 @@ end
 # Do the reports' associations work in the terminal? yes
 # Do I have a route to create a report? yes
 # Create a link or form to post to report create root yes
+
 # Create logic to display flag if comment_id is in reports table
 # Setup cancan permissions to allow only admins to see flags
 # Create destroy action in the reports controller
