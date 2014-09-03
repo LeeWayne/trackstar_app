@@ -1,16 +1,14 @@
-<h1>Users</h1>
+<h1>Members</h1>
 
 <% @users.each do |user| %>
-  <tr>
-    <td><%= user.email %></td>
-    <td><%= user.password_digest %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Is this goodbye?!' } %></td>
-  </tr>
+    <h3>Name</h3>
+    <p><%= user.name %></p>
+    <h3>Email</h3>
+    <p><%= user.email %></p>
+    <%= link_to 'Show', user %> |
+    <%= link_to 'Edit', edit_user_path(user) %> |
+    <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Is this goodbye?!' } %>
 <% end %>
-</table>
 
-<br />
-
+<br>
 <%= link_to 'New User', new_user_path %>

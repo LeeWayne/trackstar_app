@@ -4,9 +4,9 @@ class ReportsController < ApplicationController
     @track = Track.find(params[:track_id])
     @report = Report.new(user_id: current_user.id, comment_id: params[:comment_id])
     if @report.save
-      flash[:notice] = "You have reported that post"
+      flash[:notice] = "You're report has been sent"
     else 
-      flash[:notice] = "Something went wrong."
+      flash[:notice] = "You have already reported that comment"
     end
     redirect_to @track
   end

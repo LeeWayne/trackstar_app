@@ -9,15 +9,14 @@
 <body>
   <header>
     <h1>Trackstar</h1>
-  </header>
-
-
-  <nav>
-    <%= link_to 'Users', users_path %> |
-    <%= link_to 'New User', new_user_path %> |
-    <%= link_to 'Tracks', tracks_path %> |
-    <%= link_to 'New Tracks', new_track_path %>
-  </nav>
+    <nav>
+      <%= link_to 'Login', new_session_path %> |
+      <%= link_to 'Sign Up', new_user_path %> |
+      <%= link_to 'Members', users_path %> |
+      <%= link_to 'Tracks', tracks_path %> |
+      <%= link_to 'Upload Track', new_track_path %>
+    </nav>
+  </header>  
 
     <% flash.each do |name, msg| %>
     <div class="flash-message flash-message-<%= name %>">
@@ -28,8 +27,6 @@
   <% if current_user %>
     <p>Greetings: <%= current_user.email %></p>
     <p><%= link_to 'Log Out', logout_path %></p>
-  <% else %> 
-    <p><%= link_to 'Login', new_session_path %></p>
   <% end %>
 
 <%= yield %>

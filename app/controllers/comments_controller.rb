@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+  load_and_authorize_resource
   def create
     @track = Track.find(params[:track_id])
     @comment = Comment.build_from(@track, current_user.id, params[:comment][:body] )
@@ -11,6 +11,11 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_to track_url
+  end
+
+  def edit
+    @track = Track.find(params[:track_id])
+    @comment = Comment.find(params[:id])
   end
 
 end

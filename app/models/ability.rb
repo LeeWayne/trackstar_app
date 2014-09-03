@@ -21,6 +21,7 @@ class Ability
             end
 
         else # non-logged-in users
+            can :create, User
             can :read, User
             can :read, Track
         end

@@ -1,30 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+  <h3>Name:</h3>
+  <p><%= @track.name %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @track.name %>
-</p>
-<p>
-  <b>Description:</b>
-  <%= @track.description %>
-</p>
+  <h3>Description:</h3>
+  <p><%= @track.description %></p>
 
-<p>
-  <b>File Name:</b>
-  <%= @track.track_song %>
-</p>
-<p>
-  <b>User:</b>
-  <%= @track.user.name %>
-</p>
-<p>
-<b>Song:</b>
-<%= audio_tag(@track.track_song,autoplay: false, controls: true) %>
-</p>
-<%= render @comments %>
+  <h3>Uploaded By:</h3>
+  <p><%= @track.user.name %></p>
 
-<h2>Say Whaaat??!!:</h2>
+  <h3>Song:</h3><br>
+  <p><%= audio_tag(@track.track_song,autoplay: false, controls: true) %> </p>
+  
+  <%= render @comments %>
+
+  <h3>Your Say...</h3>
   
 <%= form_for ([@track, @comment]) do |f| %>
   <div class='field'>
