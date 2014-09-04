@@ -8,7 +8,7 @@ class Ability
             cannot :report, Comment
 
         elsif user.persisted? # logged in users
-            can :read, User
+            can :manage, User, id: user.id
             
             can :read, Track
             can :create, Track
@@ -16,6 +16,8 @@ class Ability
 
             can :create, Comment
             can :destroy , Comment, user_id: user.id
+            can :edit, Comment, user_id: user.id
+            can :update, Comment, user_id: user.id
             can :report, Comment do |comment|
               comment.user != user && !user.reported_comments.include?(comment)
             end

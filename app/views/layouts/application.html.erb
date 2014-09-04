@@ -17,7 +17,7 @@
       <%= link_to 'Upload Track', new_track_path %>
     </nav>
   </header>  
-
+  <div class="spacer">
     <% flash.each do |name, msg| %>
     <div class="flash-message flash-message-<%= name %>">
       <%= msg %>
@@ -25,9 +25,10 @@
   <% end %>
 
   <% if current_user %>
-    <p>Greetings: <%= current_user.email %></p>
+    <p> Welcome aboard, <%= current_user.name %> </p>
     <p><%= link_to 'Log Out', logout_path %></p>
   <% end %>
+ </div>
 <div class="wrapper">
 <%= yield %>
 </div>

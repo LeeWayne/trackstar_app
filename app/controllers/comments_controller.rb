@@ -19,4 +19,10 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
   end
 
+  def update
+    @comment = Comment.find(params[:id])
+    @comment.update_attributes(params[:comment])
+    redirect_to users_path
+  end
+
 end

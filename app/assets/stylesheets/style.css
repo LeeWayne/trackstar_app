@@ -25,8 +25,9 @@ body {
 .wrapper {
   margin:0 auto;
   padding: 20px;
+  margin-bottom: 30px;
   max-width: 940px;
-  border: 1px solid black;
+  border: 2px solid #8BC1E4;
 /*  background-image: url("http://upload.wikimedia.org/wikipedia/commons/a/a5/Cheering_crowd_in_a_concert.jpg");
   background-position: center;*/
   background-color: rgba(139,193,228,.7);
@@ -37,6 +38,20 @@ body {
   text-decoration: none;
   color: #8BC1E4;
 }
+
+.field textarea {
+  height: 50px;
+}
+
+textarea.standard {
+  height: 10000px;
+  width: 21432154px;
+  }
+
+.spacer {
+  min-height: 100px;
+}
+
 #8BC1E4 - blue
 #C8497c - pink
 #282A2A - black

@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }
-  validates :password, presence: true
+  validates :password, presence: true, on: :create
 
   has_many :tracks
   has_many :reports
