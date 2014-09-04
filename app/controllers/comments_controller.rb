@@ -8,9 +8,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @track = Track.find(params[:track_id])
     @comment = Comment.find(params[:id])
     @comment.destroy
-    redirect_to track_url
+    redirect_to @track
   end
 
   def edit

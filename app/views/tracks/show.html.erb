@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-  <h3>Name:</h3>
+  <h3>Name</h3>
   <p><%= @track.name %></p>
 
-  <h3>Description:</h3>
+  <h3>Description</h3>
   <p><%= @track.description %></p>
 
-  <h3>Uploaded By:</h3>
+  <h3>Uploaded By</h3>
   <p><%= @track.user.name %></p>
 
-  <h3>Song:</h3><br>
+ 
   <p><%= audio_tag(@track.track_song,autoplay: false, controls: true) %> </p>
   
   <%= render @comments %>

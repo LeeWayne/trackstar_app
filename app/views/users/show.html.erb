@@ -1,28 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+  <h3>Name</h3>
+  <p><%= @user.name %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+  <h3>Email</h3>
+  <p><%= @user.email %></p>
 
-<p>
-  <b>Password:</b>
-  <%= @user.password_digest %>
-</p>
-<p>
-  <b>About:</b>
-  <%= @user.about %>
-</p>
-<h3>My Tunes</h3>
-<p><% @user.tracks.each do |track| %></p>
-    <%= track.name %><br>
-    <%= link_to 'Tracks', tracks_path %>
-  <% end %><br>
+  <h3>Profile</h3>
+  <p><%= @user.about %></p>
+
+  <h3>My Tunes</h3>
+  <p><% @user.tracks.each do |track| %></p>
+      <%= track.name %><br>
+      <%= link_to 'Tracks', tracks_path %>
+     <% end %><br>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

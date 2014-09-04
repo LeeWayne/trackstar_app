@@ -8,12 +8,12 @@
 </head>
 <body>
   <header>
-    <h1>Trackstar</h1>
     <nav>
-      <%= link_to 'Login', new_session_path %> |
-      <%= link_to 'Sign Up', new_user_path %> |
-      <%= link_to 'Members', users_path %> |
-      <%= link_to 'Tracks', tracks_path %> |
+      <span class="home"><%= link_to 'Trackstar', root_path %></span>
+      <%= link_to 'Login', new_session_path %> 
+      <%= link_to 'Sign Up', new_user_path %> 
+      <%= link_to 'Members', users_path %> 
+      <%= link_to 'Tracks', tracks_path %> 
       <%= link_to 'Upload Track', new_track_path %>
     </nav>
   </header>  
@@ -28,8 +28,8 @@
     <p>Greetings: <%= current_user.email %></p>
     <p><%= link_to 'Log Out', logout_path %></p>
   <% end %>
-
+<div class="wrapper">
 <%= yield %>
-
+</div>
 </body>
 </html>
