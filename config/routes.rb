@@ -13,6 +13,9 @@ Project1::Application.routes.draw do
    resources :comments do
     resources :reports, only: :create
    end
+   resources :posts do
+    get 'page/:page', action: :index, on: :collection
+  end
  end
 
 

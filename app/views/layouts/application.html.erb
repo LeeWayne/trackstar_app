@@ -5,10 +5,11 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+<link href='http://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <header>
-    <nav>
+    <nav id="header">
       <span class="home"><%= link_to 'Trackstar', root_path %></span>
       <%= link_to 'Login', new_session_path %> 
       <%= link_to 'Sign Up', new_user_path %> 

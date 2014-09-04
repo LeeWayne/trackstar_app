@@ -14,6 +14,7 @@ group :development, :test do
           gem 'better_errors'
           gem 'meta_request'
           gem 'acts_as_commentable_with_threading'
+          gem 'kaminari' 
   end
 
 gem 'cancancan', '~> 1.9'

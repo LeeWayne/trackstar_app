@@ -16,7 +16,7 @@ class TracksController < ApplicationController
   def show
     @track = Track.find(params[:id])
     @comment = Comment.new
-    @comments = @track.comment_threads
+    @comments = @track.comment_threads.order(:created_at).page(params[:page])
   end
 
   def destroy

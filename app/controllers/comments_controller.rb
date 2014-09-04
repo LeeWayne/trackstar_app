@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
   def update
     @comment = Comment.find(params[:id])
     @comment.update_attributes(params[:comment])
-    redirect_to users_path
+    redirect_to track_path(params[:track_id])
   end
 
 end
