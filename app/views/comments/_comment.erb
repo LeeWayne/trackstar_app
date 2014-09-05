@@ -1,4 +1,4 @@
-<h3>Comments</h3>
+<h3>Comment</h3>
 <em><%= comment.body %></em><br>
 by <i><%= comment.user.name %>&nbsp;&middot;&nbsp;<%= time_ago_in_words(comment.created_at) %>&nbsp;ago</i>
 <% if can? :admin, Report %><br>

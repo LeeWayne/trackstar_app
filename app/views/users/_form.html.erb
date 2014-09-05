@@ -31,9 +31,13 @@
     </div>
   <% end %>
     <div class="field">
-    <%= f.label :about %><br>
-    <%= f.text_area :about %>
-  </div>
+      <%= f.label :about %><br>
+      <%= f.text_area :about %>
+    </div>
+    <div class="field">
+      <%= f.label :profile_image %><br>
+      <%= f.file_field :profile_image %>
+    </div>
 
   <div class="actions">
     <%= f.submit %>

@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+  
+  
+  <%= image_tag @user.profile_image.url %>
+
+
+
+
+
   <h3>Name</h3>
   <p><%= @user.name %></p>
 
@@ -14,6 +22,7 @@
       <%= track.name %><br>
       <%= link_to 'Tracks', tracks_path %>
      <% end %><br>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

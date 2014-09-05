@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
-  attr_accessible :about, :email, :name, :password, :password_confirmation, :track_songs
+  attr_accessible :about, :email, :name, :password, :password_confirmation, :track_songs, :profile_image
+
+  mount_uploader :profile_image, ProfileImageUploader
 
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }

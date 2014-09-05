@@ -19,7 +19,7 @@ group :development, :test do
 
 gem 'cancancan', '~> 1.9'
 gem 'carrierwave', '0.9.0'
-
+gem 'rmagick'
 
 
 

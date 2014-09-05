@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140903132303) do
+ActiveRecord::Schema.define(:version => 20140904164827) do
 
   create_table "comments", :force => true do |t|
     t.integer  "commentable_id",   :default => 0
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20140903132303) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "role"
+    t.string   "profile_image"
   end
 
 end
